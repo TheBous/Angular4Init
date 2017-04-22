@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CoursesComponent } from './courses/courses.component';
+import { AuthorComponent } from './author/author.component';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,5 @@ import { CoursesComponent } from './courses/courses.component';
 })
 
 export class AppComponent {
-  title = 'My first Angular 2 app {{mhee}}';
+  title = 'SONG MUSIC';
 }
