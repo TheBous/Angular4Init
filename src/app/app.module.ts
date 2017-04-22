@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AlertModule } from 'ngx-bootstrap';
 //import {  } from 'angular/'
 
 import { AppComponent } from './app.component';
@@ -19,7 +20,8 @@ import { AuthorComponent } from './author/author.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
