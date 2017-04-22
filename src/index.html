@@ -5,12 +5,41 @@
   <meta charset="utf-8">
   <title>Es1</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-  <script src="../node_modules/bootstrap/dist/css/bootstrap.css"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+
+
+<!--NAVBAR-->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [router-link]="['/Samples']">Angular2-Bootstrap</a>
+      <a class="navbar-brand" [router-link]="['/Sample', {name: 'carousel'}]">Carousel</a>
+      <a class="navbar-brand" [router-link]="['/Sample', {name: 'alert'}]">Alert</a>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container-fluid">
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+
+
+
+
+
+<!--JUMBOTRON-->
+  <div class="jumbotron">
+    <h1>Song Music!</h1>
+    <p>App for emotional music</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
+
   <app-root>Loading...</app-root>
 </body>
 </html>

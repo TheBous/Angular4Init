@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
