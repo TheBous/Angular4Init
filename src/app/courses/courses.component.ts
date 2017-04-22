@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class CoursesComponent {
-  title: string = "Questo è il titolo di Courses interpolato(typescript merda)";
+  title: string = "Some title tests"
   courses = ["Course1", "Course2", "Course3"];
 }
