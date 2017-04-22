@@ -11,4 +11,5 @@ import { AuthorComponent } from './author/author.component';
 
 export class AppComponent {
   title = 'SONG MUSIC';
+  imgURL = "http://oritiquintac.altervista.org/6_musica5/musica.jpg";
 }
