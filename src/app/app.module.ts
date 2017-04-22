@@ -7,12 +7,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
+import { AutoGrowDirective } from './auto-grow.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    AuthorComponent
+    AuthorComponent,
+    AutoGrowDirective
   ],
   imports: [
     BrowserModule,
