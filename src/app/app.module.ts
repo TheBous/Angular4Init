@@ -4,9 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
-import { MaterialModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MaterializeModule } from 'angular2-materialize';
 
 
 //components
@@ -32,9 +30,7 @@ const appRoutes: Routes = [
     BrowserModule,
     //route
     RouterModule.forRoot(appRoutes),
-    //Material design
-    MaterialModule.forRoot(),
-    BrowserAnimationsModule,
+    MaterializeModule,
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),

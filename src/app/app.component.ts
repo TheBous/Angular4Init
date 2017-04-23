@@ -4,7 +4,6 @@ import { AuthorComponent } from './author/author.component';
 import { AlertModule } from 'ngx-bootstrap';
 
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
