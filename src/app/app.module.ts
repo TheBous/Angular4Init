@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -13,7 +14,7 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
 
-//app routing
+//app route
 const appRoutes: Routes = [
   { path: 'author', component: AuthorComponent },
   { path: 'courses', component: CoursesComponent },
@@ -29,8 +30,11 @@ const appRoutes: Routes = [
 
   imports: [
     BrowserModule,
+    //route
     RouterModule.forRoot(appRoutes),
+    //Material design
     MaterialModule.forRoot(),
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
