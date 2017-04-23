@@ -1,27 +1,36 @@
 <!doctype html>
 <html>
+
 <head>
   <base href="/">
   <meta charset="utf-8">
   <title>Es1</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+  <!--bootstrap-->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!--Material design icons& fonts-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
 
   <!--NAVBAR-->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a routerLink="/courses" href="/courses">Courses</a>
-        <a routerLink="/author" href="/author">Author</a>
-        <!-- <a class="navbar-brand" [router-link]="['/Sample', {name: 'alert'}]">Alert</a> -->
-      </div>
-    </div>
-  </div>
+  <nav>
+    <a routerLink="/courses" href="/courses">Courses</a>
+    <a routerLink="/author" href="/author">Author</a>
+  </nav>
 
   <app-root>Loading...</app-root>
+
+
+  <!--FOOTER-->
+  <footer>
+    This is app footer!
+  </footer>
+
 </body>
+
 </html>
