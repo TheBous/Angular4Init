@@ -11,6 +11,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
+import { ChipComponent } from './chip/chip.component';
 
 //app route
 const appRoutes: Routes = [
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
     AppComponent,
     CoursesComponent,
     AuthorComponent,
+    ChipComponent,
   ],
 
   imports: [
