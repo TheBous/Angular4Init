@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
+import { AlertModule } from 'ngx-bootstrap';
+
 
 
 @Component({

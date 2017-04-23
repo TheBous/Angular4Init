@@ -3,27 +3,37 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AlertModule } from 'ngx-bootstrap';
-//import {  } from 'angular/'
+import { RouterModule, Routes } from '@angular/router';
 
+//components
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
-//import { AutoGrowDirective } from './auto-grow.directive';
+
+//app routing
+const appRoutes: Routes = [
+  { path: 'author', component: AuthorComponent },
+  { path: 'courses', component: CoursesComponent },
+  { path: '', component: AppComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
     AuthorComponent,
-    //AutoGrowDirective
   ],
+
   imports: [
     BrowserModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     HttpModule,
     AlertModule.forRoot(),
+
   ],
   providers: [],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
