@@ -14,11 +14,14 @@ import { ChipComponent } from './chip/chip.component';
 import { LikeComponent } from './like/like.component';
 import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
 import { SimilarArtistComponent } from './similar-artist/similar-artist.component';
+import { InfoArtistComponent } from './info-artist/info-artist.component';
+import { VfdsComponent } from './vfds/vfds.component';
 
 //app route
 const appRoutes: Routes = [
   { path: 'author', component: AuthorComponent },
   { path: 'courses', component: CoursesComponent },
+  { path: 'artist', component: InfoArtistComponent },
   { path: '', component: AppComponent },
 ];
 
@@ -31,6 +34,8 @@ const appRoutes: Routes = [
     LikeComponent,
     DoubleConditionIfElseComponent,
     SimilarArtistComponent,
+    InfoArtistComponent,
+    VfdsComponent,
   ],
 
   imports: [
