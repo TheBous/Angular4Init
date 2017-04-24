@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SimilarArtistComponent } from '../similar-artist/similar-artist.component'
+//import { SimilarArtistComponent } from '../similar-artist/similar-artist.component'
 
 @Component({
   selector: 'info-artist',

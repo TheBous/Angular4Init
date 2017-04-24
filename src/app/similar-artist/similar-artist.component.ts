@@ -12,9 +12,9 @@ export class SimilarArtistComponent implements OnInit{
   constructor(private _lastFmService_: LastFmService) { }
   similar = {};
   trueTemplate = false;
-  loadSimilarUser(){
+  loadSimilarUser(similElement){
     this.trueTemplate = true;
-    this._lastFmService_.getUser("Cher").subscribe(data => this.similar = data);
+    this._lastFmService_.getUser(similElement).subscribe(data => this.similar = data);
     console.log(this.similar);
   }
 
