@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthorService } from '../services/author/author.service';
+import { LikeComponent } from '../like/like.component'
 
 @Component({
   selector: 'author',

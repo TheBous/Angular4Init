@@ -1,4 +1,7 @@
-<div class="chip" (click)= "changeChipsValue()">
+<div class="chip" (click)="changeChipsValue()">
   {{initialChipValue}}
   <i class="close material-icons">close</i>
 </div>
+
+
+<i class="large material-icons" (likeDislike) = "changeIcon()">thumb_up</i>
