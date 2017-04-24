@@ -13,7 +13,7 @@ import { AuthorComponent } from './author/author.component';
 import { ChipComponent } from './chip/chip.component';
 import { LikeComponent } from './like/like.component';
 import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
-import { FiltroPipe } from './filtro.pipe';
+import { SimilarArtistComponent } from './similar-artist/similar-artist.component';
 
 //app route
 const appRoutes: Routes = [
@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     ChipComponent,
     LikeComponent,
     DoubleConditionIfElseComponent,
-    FiltroPipe,
+    SimilarArtistComponent,
   ],
 
   imports: [
