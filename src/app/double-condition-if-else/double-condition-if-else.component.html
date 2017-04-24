@@ -1,0 +1,7 @@
+<div *ngIf="try; else falsyTemplate">
+  <h1>Condition Passed!</h1>
+</div>
+
+<ng-template #falsyTemplate>
+  <h1>Condition Failed!</h1>
+</ng-template>

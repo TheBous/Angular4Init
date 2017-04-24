@@ -12,6 +12,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
 import { ChipComponent } from './chip/chip.component';
 import { LikeComponent } from './like/like.component';
+import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
 
 //app route
 const appRoutes: Routes = [
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
     AuthorComponent,
     ChipComponent,
     LikeComponent,
+    DoubleConditionIfElseComponent,
   ],
 
   imports: [

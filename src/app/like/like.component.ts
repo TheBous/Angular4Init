@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {  } from '../double-condition-if-else/double-condition-if-else.component'
 
 @Component({
   selector: 'like',
