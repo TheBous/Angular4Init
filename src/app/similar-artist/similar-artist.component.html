@@ -40,38 +40,41 @@
       <div class="row">
         <div class="col s12 m6 l4">
           <div class="card medium">
-            <div class="card-image waves-effect waves-block waves-light">
+            <div class="card-image waves-effect waves-block waves-light" (click)="showTopTracks($event, artist.name)">
               <img class="activator" src="{{artist.image[4]['#text']}}">
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{artist.name}}<i class="material-icons right">more_vert</i></span>
+              <span class="card-title activator grey-text text-darken-4">{{artist.name}}<i (click)="showTopTracks($event, artist.name)" class="material-icons right">more_vert</i></span>
               <p><a href="{{artist.url}}">{{artist.url}}</a></p>
             </div>
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">{{artist.name}}<i class="material-icons right">close</i></span>
-              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+              <h4>Top tracks:</h4>
+              <span *ngIf="showReveal">
+                <!-- <ul class="collection">
+                  <li class="collection-item" *ngFor="let tracks of topTrack?.toptracks?.track">
+                    {{tracks.name}}
+                  </li>
+                </ul> -->
+
+                <ul class="collection">
+                   <li class="collection-item avatar" *ngFor="let tracks of topTrack?.toptracks?.track">
+                     <img src="{{tracks.image[0]['#text']}}" alt="" class="circle">
+                     <span class="title">Listener: {{tracks.listeners}}</span>
+                     <p>
+                       {{tracks.name}}
+                     </p>
+                     <a href="{{tracks.name}}" class="secondary-content"><i class="material-icons">grade</i></a>
+                   </li>
+                 </ul>
+
+
+
+              </span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="card">
-         <div class="card-content">
-           <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-         </div>
-         <div class="card-tabs">
-           <ul class="tabs tabs-fixed-width">
-             <li class="tab"><a href="#test4">Test 1</a></li>
-             <li class="tab"><a class="active" href="#test5">Test 2</a></li>
-             <li class="tab"><a href="#test6">Test 3</a></li>
-           </ul>
-         </div>
-         <div class="card-content grey lighten-4">
-           <div id="test4">Test 1</div>
-           <div id="test5">Test 2</div>
-           <div id="test6">Test 3</div>
-         </div>
-       </div>
 
 
     </li>

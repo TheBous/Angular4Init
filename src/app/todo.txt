@@ -1,3 +1,7 @@
 - SIMILAR APP: TASTEDIVE
 - for similar books: project Glutenberg
 - for similar movies: TheMovieDb
+
+
+
+- quando schiacci su card roteante, fa la chiamata per chiamare le top tracks di quell'artista 

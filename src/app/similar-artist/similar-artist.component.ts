@@ -7,16 +7,31 @@ import { LastFmService } from '../services/last.fm/last-fm.service'
   styleUrls: ['./similar-artist.component.css'],
   providers: [LastFmService]
 })
-export class SimilarArtistComponent implements OnInit{
+export class SimilarArtistComponent implements OnInit {
 
   constructor(private _lastFmService_: LastFmService) { }
   similar = {};
+  ArtistInfo = {};
+  topTrack = {};
   trueTemplate = false;
-  loadSimilarUser(similElement){
+  showReveal = false;
+  loadSimilarUser(similElement) {
     this.trueTemplate = true;
-    this._lastFmService_.getUser(similElement).subscribe(data => this.similar = data);
+    this._lastFmService_.getSimilarArtist(similElement).subscribe(data => this.similar = data);
     console.log(this.similar);
+    // this._lastFmService_.getArtistInfo(similElement).subscribe(data => this.ArtistInfo = data);
+    // console.log(this.ArtistInfo);
+
   }
 
-  ngOnInit() {}
+  showTopTracks(event, artist) {
+    console.log(artist);
+    this._lastFmService_.getArtistTopTrack(artist).subscribe(data => this.topTrack = data);
+    this.showReveal = true;
+
+    console.log(this.topTrack);
+  }
+
+
+  ngOnInit() { }
 }
