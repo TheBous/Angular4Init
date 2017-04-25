@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col s12 m6 l4 offset-m3 offset-l4">
+    <div class="card">
+      <div class="card-stacked">
+        <div class="card-content">
+          <div style="text-align:center;" class="input-field inline">
+            <input id="similar" #inputSimilar>
+            <label for="similar" data-error="wrong" data-success="right">Similar Movies</label>
+          </div>
+          <a class="btn btn-waves" (click)="loadSimilarMovies(inputSimilar.value)">Search similar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div>
+  <ul>
+    <li *ngFor="let film of similarMovies?.results">
+      <div class="row">
+        <div class="col s12 m6 l4 offset-m3 offset-l4">
+          <div class="card medium">
+            <!-- <div class="card-image waves-effect waves-block waves-light" (click)="showTopTracks($event, artist.name)">
+              <img class="activator" src="{{artist.image[4]['#text']}}">
+            </div> -->
+            <div class="card-content">
+              <!-- <span class="card-title activator grey-text text-darken-4">{{film.name}}<i (click)="showTopTracks($event, artist.name)" class="material-icons right">more_vert</i></span> -->
+              <p><a href="{{film.url}}">{{film.title}}</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{film.title}}<i class="material-icons right">close</i></span>
+              <h4>Top tracks:</h4>
+              <span>
+                <ul class="collection">
+                   <li class="collection-item avatar" *ngFor="let tracks of topTrack?.toptracks?.track">
+                     <img src="{{tracks.image[0]['#text']}}" alt="" class="circle">
+                     <span class="title" style="color:#4a148c">{{film.popolarity}}</span>
+                     <p>
+                       Listener: {{film.overview}}
+                     </p>
+                     <!-- <a href="{{tracks.name}}" class="secondary-content"><i class="material-icons">grade</i></a> -->
+                   </li>
+                 </ul>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

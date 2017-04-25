@@ -4,7 +4,7 @@
         <div class="card-stacked">
           <div class="card-content">
             <div style="text-align:center;" class="input-field inline">
-              <input id="similar" type="email" #inputSimilar>
+              <input id="similar" #inputSimilar>
               <label for="similar" data-error="wrong" data-success="right">Similar musician</label>
             </div>
             <a class="btn btn-waves" (click)="loadSimilarUser(inputSimilar.value)">Search similar</a>

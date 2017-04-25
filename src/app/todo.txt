@@ -4,4 +4,5 @@
 
 
 
-- quando schiacci su card roteante, fa la chiamata per chiamare le top tracks di quell'artista 
+- quando schiacci su card roteante, fa la chiamata per chiamare le top tracks di quell'artista
+-trasformare get in post

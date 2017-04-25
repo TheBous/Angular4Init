@@ -15,15 +15,16 @@ import { LikeComponent } from './like/like.component';
 import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
 import { SimilarArtistComponent } from './songs/similar-artist/similar-artist.component';
 import { InfoArtistComponent } from './songs/info-artist/info-artist.component';
+import { SimilarMoviesComponent } from './movies/similar-movies/similar-movies.component';
 
 //services
 import { LastFmService } from './services/last.fm/last-fm.service';
 
 //app route
 const appRoutes: Routes = [
-  { path: 'author', component: AuthorComponent },
-  { path: 'courses', component: CoursesComponent },
+  { path: 'movie', component: SimilarMoviesComponent },
   { path: 'artist', component: InfoArtistComponent },
+  //{ path: 'book', component: SimilarBooksComponent },
   { path: '', component: AppComponent },
 ];
 
@@ -37,6 +38,7 @@ const appRoutes: Routes = [
     DoubleConditionIfElseComponent,
     SimilarArtistComponent,
     InfoArtistComponent,
+    SimilarMoviesComponent,
   ],
 
   imports: [
