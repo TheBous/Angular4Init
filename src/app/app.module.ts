@@ -15,7 +15,9 @@ import { LikeComponent } from './like/like.component';
 import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
 import { SimilarArtistComponent } from './similar-artist/similar-artist.component';
 import { InfoArtistComponent } from './info-artist/info-artist.component';
-import { VfdsComponent } from './vfds/vfds.component';
+
+//services
+import { LastFmService } from './services/last.fm/last-fm.service';
 
 //app route
 const appRoutes: Routes = [
@@ -35,7 +37,6 @@ const appRoutes: Routes = [
     DoubleConditionIfElseComponent,
     SimilarArtistComponent,
     InfoArtistComponent,
-    VfdsComponent,
   ],
 
   imports: [
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     AlertModule.forRoot(),
 
   ],
-  providers: [],
+  providers: [LastFmService],
 
   bootstrap: [AppComponent]
 })

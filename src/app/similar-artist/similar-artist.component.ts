@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LastFmService } from '../last-fm.service'
+import { LastFmService } from '../services/last.fm/last-fm.service'
 
 @Component({
   selector: 'similar-artist',
