@@ -13,8 +13,8 @@ import { AuthorComponent } from './author/author.component';
 import { ChipComponent } from './chip/chip.component';
 import { LikeComponent } from './like/like.component';
 import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
-import { SimilarArtistComponent } from './similar-artist/similar-artist.component';
-import { InfoArtistComponent } from './info-artist/info-artist.component';
+import { SimilarArtistComponent } from './songs/similar-artist/similar-artist.component';
+import { InfoArtistComponent } from './songs/info-artist/info-artist.component';
 
 //services
 import { LastFmService } from './services/last.fm/last-fm.service';
