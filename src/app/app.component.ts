@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthorComponent } from './author/author.component';
-import { SimilarArtistComponent } from './similar-artist/similar-artist.component'
+// import { SimilarArtistComponent } from './similar-artist/similar-artist.component'
 
 @Component({
   selector: 'app-root',

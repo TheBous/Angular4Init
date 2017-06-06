@@ -1,15 +1,19 @@
 <div class="row">
-    <div class="col s12 m6 l4 offset-m3 offset-l4">
-      <div class="card">
-        <div class="card-stacked">
-          <div class="card-content">
-            <div style="text-align:center;" class="input-field inline">
-              <input id="similar" #inputSimilar>
-              <label for="similar" data-error="wrong" data-success="right">Similar musician</label>
-            </div>
-            <a class="btn btn-waves" (click)="loadSimilarUser(inputSimilar.value)">Search similar</a>
+  <div class="col s12 m6 l4 offset-m3 offset-l4">
+    <div class="card">
+      <div class="card-stacked">
+        <div class="card-content">
+          <div style="text-align:center;" class="input-field inline">
+            <input id="similar" #term type="text" (keyup)="loadSimilarUser(term.value)">
+            <label for="similar" data-error="wrong" data-success="right">Similar musician</label>
+
           </div>
+          <!-- <a class="btn btn-waves" (click)="loadSimilarUser(inputSimilar.value)">Search similar</a> -->
+          <p *ngIf="trueTemplate">
+            <strong>Searched artist:</strong> {{similArtist}}
+          </p>
         </div>
+      </div>
     </div>
   </div>
 </div>
@@ -34,17 +38,17 @@
                    <li class="collection-item avatar" *ngFor="let tracks of topTrack?.toptracks?.track">
                      <img src="{{tracks.image[0]['#text']}}" alt="" class="circle">
                      <span class="title" style="color:#4a148c">{{tracks.name}}</span>
-                     <p>
-                       Listener: {{tracks.listeners}}
-                     </p>
-                     <!-- <a href="{{tracks.name}}" class="secondary-content"><i class="material-icons">grade</i></a> -->
-                   </li>
-                 </ul>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+              <p>
+                Listener: {{tracks.listeners}}
+              </p>
+              <!-- <a href="{{tracks.name}}" class="secondary-content"><i class="material-icons">grade</i></a> -->
     </li>
+  </ul>
+  </span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </li>
   </ul>
 </div>
