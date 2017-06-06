@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, URLSearchParams } from '@angular/http';
 import {Observable} from 'rxjs';
 import 'rxjs/add/operator/map';
 
@@ -8,9 +8,12 @@ import 'rxjs/add/operator/map';
 export class LastFmService {
   constructor(private http: Http) { }
 
-  getSimilarArtist(artist) : Observable<Object>{
+  getSimilarArtist(artist): Observable<Object> {
     return this.http.get("http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=" + artist + "&api_key=823ebf7674a816efb2b538446d6ccf79&format=json&limit=10")
-      .map((res: Response) => res.json());
+      .map((res: Response) => {
+        console.log(res.headers)
+        return res.json()
+      });
   }
 
   getArtistInfo(artist) {

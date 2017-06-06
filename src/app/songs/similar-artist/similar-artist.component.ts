@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LastFmService } from '../../services/last.fm/last-fm.service';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
+import 'rxjs/add/operator/delay';
+
 
 @Component({
   selector: 'similar-artist',
@@ -24,13 +26,11 @@ export class SimilarArtistComponent implements OnInit {
     this.similArtist = similElement;
     this.trueTemplate = true;
     this._lastFmService_.getSimilarArtist(similElement)
+      .delay(1500)
       .debounceTime(400)
       .distinctUntilChanged()
+      // .flatMap(term => this._lastFmService_.getArtistInfo(term))
       .subscribe(data => this.similar = data);
-    console.log(this.similar);
-    // this._lastFmService_.getArtistInfo(similElement).subscribe(data => this.ArtistInfo = data);
-    // console.log(this.ArtistInfo);
-
   }
 
   showTopTracks(event, artist) {
