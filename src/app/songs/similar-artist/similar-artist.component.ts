@@ -3,7 +3,11 @@ import { LastFmService } from '../../services/last.fm/last-fm.service';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/delay';
+import 'rxjs/add/operator/delay';
 
+
+//model
+import { Artist } from '../../model/artist';
 
 @Component({
   selector: 'similar-artist',
@@ -15,7 +19,7 @@ export class SimilarArtistComponent implements OnInit {
 
   constructor(private _lastFmService_: LastFmService) { }
   similArtist: String;
-  similar: Object = {};
+  similar: Array<Artist> = new Array();
   ArtistInfo = {};
   topTrack = {};
   trueTemplate = false;
@@ -30,7 +34,16 @@ export class SimilarArtistComponent implements OnInit {
       .debounceTime(400)
       .distinctUntilChanged()
       // .flatMap(term => this._lastFmService_.getArtistInfo(term))
-      .subscribe(data => this.similar = data);
+      .subscribe(data => {
+        console.log("Array di User from server:",data);
+        // console.log("length array similar", data.length)
+        for(let i=0;i<data.length;i++){
+            this.similar[i] = new Artist(data[i].name, data[i].mbid, data[i].match, data[i].url, data[i].image, data[i].streamable );
+            // console.log("this.similar[i]:",this.similar[i])
+        }
+        // this.similar = new Artist(data.image, data.match, data.mbid, data.name, data.streamable, data.url);
+        console.log("Array Similar:+++++", this.similar);
+      });
   }
 
   showTopTracks(event, artist) {

@@ -8,11 +8,11 @@ import { MaterializeModule } from 'angular2-materialize';
 
 //components
 import { AppComponent } from './app.component';
-import { CoursesComponent } from './courses/courses.component';
-import { AuthorComponent } from './author/author.component';
-import { ChipComponent } from './chip/chip.component';
-import { LikeComponent } from './like/like.component';
-import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
+// import { CoursesComponent } from './courses/courses.component';
+// import { AuthorComponent } from './author/author.component';
+// import { ChipComponent } from './chip/chip.component';
+// import { LikeComponent } from './like/like.component';
+// import { DoubleConditionIfElseComponent } from './double-condition-if-else/double-condition-if-else.component';
 import { SimilarArtistComponent } from './songs/similar-artist/similar-artist.component';
 import { InfoArtistComponent } from './songs/info-artist/info-artist.component';
 import { SimilarMoviesComponent } from './movies/similar-movies/similar-movies.component';
@@ -31,11 +31,11 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent,
-    AuthorComponent,
-    ChipComponent,
-    LikeComponent,
-    DoubleConditionIfElseComponent,
+    // CoursesComponent,
+    // AuthorComponent,
+    // ChipComponent,
+    // LikeComponent,
+    // DoubleConditionIfElseComponent,
     SimilarArtistComponent,
     InfoArtistComponent,
     SimilarMoviesComponent,
